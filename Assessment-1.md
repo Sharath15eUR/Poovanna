@@ -45,7 +45,10 @@ $ cd ..
 $ ls -lt dir1 > sortedFileName.txt
 ```
 
+![[sortedFileName.webp|563]]
+
 ---
+
 
 
 
