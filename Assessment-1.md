@@ -45,7 +45,7 @@ $ cd ..
 $ ls -lt dir1 > sortedFileName.txt
 ```
 
-![[sortedFileName.webp|563]]
+![Alt text](sortedFileNames.webp "Optional Title")
 
 ---
 
