@@ -45,7 +45,7 @@ $ cd ..
 $ ls -lt dir1 > sortedFileName.txt
 ```
 
-![Sorted File Names output](sortedFileName.webp "Optional Title")
+![Sorted File Names output](./images/sortedFileName.webp "Optional Title")
 
 ---
 
