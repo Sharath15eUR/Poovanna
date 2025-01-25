@@ -1,6 +1,6 @@
 1) Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
 	`$ find -maxdepth 1 -type f -size +1M > output.txt`
-![](../images/Pasted%image%20250125113443.png)
+![](../images/Pasted%20image%20250125113443.png)
 
 
 ---
