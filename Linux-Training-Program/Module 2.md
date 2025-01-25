@@ -9,7 +9,7 @@
 
 	`$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt`
 
-	![[Pasted image 20250125113955.webp|371]]
+	![][Pasted%image%20250125113955.webp|371] ""]
 
 	![[Pasted image 20250125114025.webp|475]]
 
