@@ -1,27 +1,27 @@
-1) Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
-	`$ find -maxdepth 1 -type f -size +1M > output.txt`
-![](../images/Pasted%20image%20250125113443.png)
+#### 1) Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
+`$ find -maxdepth 1 -type f -size +1M > output.txt`
 
+![](../images/Pasted%20image%2020250125113443.png)
 
 ---
 
-2) Replace all occurrences of "localhost" with "127.0.0.1" in a configuration file named config.txt, and save the updated file as updated_config.txt.
+#### 2) Replace all occurrences of "localhost" with "127.0.0.1" in a configuration file named config.txt, and save the updated file as updated_config.txt.
 
-	`$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt`
+`$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt`
 
-	![][Pasted%image%20250125113955.webp|371] ""]
+![](../images/Pasted%20image%2020250125113955.webp)
 
-	![[Pasted image 20250125114025.webp|475]]
+![](../images/Pasted%20image%2020250125114025.webp)
 
 	
 
 ---
 
-3) Use the appropriate command to search for lines containing the word "ERROR" in a log file but exclude lines containing "DEBUG". Save the results to a file named
-	filtered_log.txt.
 
-	log:
-	
+#### 3) Use the appropriate command to search for lines containing the word "ERROR" in a log file but exclude lines containing "DEBUG". Save the results to a file named filtered_log.txt.
+
+```
+log:
 	DEBUG: Starting the application initialization.
 	ERROR: Unable to connect to the database.
 	INFO: User 'admin' logged in successfully.
@@ -37,20 +37,24 @@
 	INFO: Shutting down the system gracefully.
 	DEBUG: Closing unused network connections.
 	ERROR: DEBUG - Unexpected server response received.
+```
+	
+ ```
+ 	$ grep "ERROR" log.txt | grep -v "DEBUG" > filtered_log.txt
+ ```
 
-	`$ grep "ERROR" log.txt | grep -v "DEBUG" > filtered_log.txt`
+![](../images/Pasted%20image%2020250125120453.webp)
 
-	![[Pasted image 20250125120453.webp]]
-
-	![[Pasted image 20250125120514.webp]]
+![](../images/Pasted%20image%2020250125120514.webp)
 
 
 ---
 
-4) Write a code to identify the process with the highest memory usage and then terminate it.
+#### 4) Write a code to identify the process with the highest memory usage and then terminate it.
 	- Create a script and make it executable
 	- Run the script
 
+***Script***
 ```
 #!/bin/bash 
 
@@ -73,22 +77,22 @@ else echo
 fi
 ```
 
-![[Pasted image 20250125204946.webp]]
+![](../images/Pasted%20image%2020250125204946.webp)
 
 
 ---
 
-5) Use the networking tool command and print all the gateway available in a sorted manner
+#### 5) Use the networking tool command and print all the gateway available in a sorted manner
 
 	- Create a script and make it executable
 	- Run the script
 	
-	***Script***
-	```
+***Script***
+```
 	#!/bin/bash
 	netstat -rn | awk '/^0.0.0.0/ {print $2}' | sort -u
-	```
+```
 
-	![[Pasted image 20250125203100.webp]]
+![](../images/Pasted%20image%2020250125203100.webp)
 
 ***
