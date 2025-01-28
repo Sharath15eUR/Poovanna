@@ -1,7 +1,8 @@
 
 
 ### ***Scenario***: 
-Automating file backup and Reporting to the system. Create a shell script called "backup_manager.sh" that performs the following tasks incorporating the concepts suggested.**
+
+>**Automating file backup and Reporting to the system. Create a shell script called "backup_manager.sh" that performs the following tasks incorporating the concepts suggested.**
 
 ---
 
@@ -99,7 +100,7 @@ for FILE in "${FILES[@]}"; do
         
         # Check if the file already exists in the backup directory
         if [ -e "$BACKUP_DIR/$FILE_NAME" ]; then
-            # Overwrite file if it is older than the source file using timestamps
+            # Overwrite file if it is older than the source file using timestamps, by using -nt or newerthan option
             if [ "$FILE" -nt "$BACKUP_DIR/$FILE_NAME" ]; then
                 cp "$FILE" "$BACKUP_DIR"
                 ((BACKUP_COUNT++))
@@ -133,8 +134,7 @@ echo "Backup completed successfully..!"
 ---
 
 ### ***Output***
-
-![](../images/Pasted%image%20250128220911.webp)
+![](../images/Pasted%20image%2020250128220911.webp)
 
 ---
 
