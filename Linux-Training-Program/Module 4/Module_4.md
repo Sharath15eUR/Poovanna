@@ -36,9 +36,8 @@ output_file="$2"
 # will clear output_file if it already exists
 > "$output_file"
 
-# Read the file line by line without using file descriptors
+
 while read -r line; do
-    # Extract only the correct "frame.time"
     if [[ "$line" =~ ^\"frame\.time\" ]]; then
         frame_time="$line"
     elif [[ "$line" =~ ^\"wlan\.fc\.type\" ]]; then
@@ -46,15 +45,15 @@ while read -r line; do
     elif [[ "$line" =~ ^\"wlan\.fc\.subtype\" ]]; then
         wlan_fc_subtype="$line"
         
-        # Write extracted parameters to output file in expected format
         echo "$frame_time" >> "$output_file"
         echo "$wlan_fc_type" >> "$output_file"
         echo "$wlan_fc_subtype" >> "$output_file"
-        echo "" >> "$output_file" # Add a newline for separation
+        echo "" >> "$output_file" 
     fi
-done < "$input_file"  # Directly reading from the input file
+done < "$input_file"  
 
-echo "Extraction complete. Output saved in $output_file"
+echo "Successfully completed. Output saved in $output_file"
+
 
 ```
 
