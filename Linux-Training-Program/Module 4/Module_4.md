@@ -1,0 +1,67 @@
+#### ***SCENARIO***
+
+**For the attached file, write a bash script which should take the file as input and have to go through it line by line and need to generate an output file (say output.txt) with listings
+of following parameters fetched from the input file.**
+
+**Params expected to be fetched from input.txt file : "frame.time", "wlan.fc.type", "wlan.fc.subtype"**
+
+**Sample output expected in output.txt:**
+
+**"frame.time": "Nov 14, 2024 11:44:48.219200000 India Standard Time",**
+**"wlan.fc.type": "1",**
+**"wlan.fc.subtype": "9"**
+**"frame.time": "Nov 14, 2024 11:44:48.219208000 India Standard Time",**
+**"wlan.fc.type": "0",**
+**"wlan.fc.subtype": "1",**
+
+**and so on.**
+
+
+---
+
+#### ***SCRIPT***
+
+```
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "ERROR: Insufficient arguments."
+    echo "Usage: $0 <input_file> <output_file>"
+    exit 1
+fi
+
+input_file="$1"
+output_file="$2"
+
+# will clear output_file if it already exists
+> "$output_file"
+
+# Read the file line by line without using file descriptors
+while read -r line; do
+    # Extract only the correct "frame.time"
+    if [[ "$line" =~ ^\"frame\.time\" ]]; then
+        frame_time="$line"
+    elif [[ "$line" =~ ^\"wlan\.fc\.type\" ]]; then
+        wlan_fc_type="$line"
+    elif [[ "$line" =~ ^\"wlan\.fc\.subtype\" ]]; then
+        wlan_fc_subtype="$line"
+        
+        # Write extracted parameters to output file in expected format
+        echo "$frame_time" >> "$output_file"
+        echo "$wlan_fc_type" >> "$output_file"
+        echo "$wlan_fc_subtype" >> "$output_file"
+        echo "" >> "$output_file" # Add a newline for separation
+    fi
+done < "$input_file"  # Directly reading from the input file
+
+echo "Extraction complete. Output saved in $output_file"
+
+```
+
+---
+
+#### ***OUTPUT***
+
+![[Pasted image 20250131000925.webp]]
+
+---
