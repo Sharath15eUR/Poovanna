@@ -61,6 +61,6 @@ echo "Successfully completed. Output saved in $output_file"
 
 #### ***OUTPUT***
 
-![[Pasted image 20250131000925.webp]]
+![](../../images/Pasted%20image%2020250131000925.webp)
 
 ---
