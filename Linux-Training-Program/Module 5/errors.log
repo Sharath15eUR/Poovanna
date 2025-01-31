@@ -1,0 +1,5 @@
+test/file1.txt:1:KBP sfkldfal
+test/file2.txt:3:KBP
+test/file2.txt:3:KBP
+Error: No arguments provided. Use './file_analyzer.sh --help' for usage details.
+Error: Keyword must not be empty.
