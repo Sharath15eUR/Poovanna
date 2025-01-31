@@ -1,7 +1,7 @@
 
 ---
 
-#### ***Problem Statement***
+## ***Problem Statement***
 
 Create a Bash script 'file_analyzer.sh', to demonstrate the following concepts:
 1. Recursive functions
@@ -34,7 +34,7 @@ Example usage:
 
 ---
 
-#### ***Script***
+## ***Script***
 
 ```
 #!/bin/bash
@@ -149,7 +149,7 @@ fi
 ---
 
 
-#### ***Output***
+## ***Output***
 
 ![](../../images/Pasted%20image%2020250131225538.webp "")
 
