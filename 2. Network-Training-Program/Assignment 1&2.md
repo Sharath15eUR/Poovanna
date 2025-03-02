@@ -1,4 +1,3 @@
-![Sorted File Names output](../images/sortedFileName.webp "Optional Title")
 ### Question No: 01
 #### Consider a case, a folder has multiple files and how would copy it to destination machine path (Try using SCP, cp options in Linux)
 ---
@@ -21,7 +20,7 @@ sudo systemctl status ssh
 
 ***To copy multiple files from a folder to the destination machine***
 `$scp -P port username@ip_address:source_addr dest_addr`
-![[Pasted image 20250228000944.webp|907]]
+![](./images/Pasted%20image%2020250228000944.webp)
 
 
 ### Question No: 02
@@ -50,15 +49,15 @@ sudo systemctl status ssh
 - In order to download a file use GET
 - In order to upload a file use PUT
 
-![[Pasted image 20250301223054.webp]]
+![](./images/Pasted%20image%2020250301223054.webp)
 
 
 Wireshark packet transfer
 - SFTP packets are encrypted
-![[Pasted image 20250301223507.webp]]
+![](./images/Pasted%20image%2020250301223507.webp)
 
 - While FTP packets are not encrypted
-![[Pasted image 20250301225057.webp]]
+![](./images/Pasted%20image%2020250301225057.webp)
 
 
 ### Question No: 03
@@ -101,7 +100,7 @@ Examples:
 	`suco tcpdump not UDP`
 10. Capture traffic from a specific host
 	`sudo tcpdump host ip_address`
-[[wireshark]]
+
 
 #### **2. Wireshark**
 
@@ -123,21 +122,22 @@ Inside the *Apply filter option*, we can apply packet filters like:
 ### Question No: 04
 #### Understand linux utility commands like - ping, arp (Understand each params from ifconfig output)
 ---
-#### Ping 
+#### 1. Ping 
 
-The `ping` command is a network utility used to test the reachability of a host on a network[2](https://phoenixnap.com/kb/linux-network-commands). It sends Internet Control Message Protocol (ICMP) echo requests to a specified host and measures the round-trip time (RTT), which helps determine network latency[2](https://phoenixnap.com/kb/linux-network-commands).
-	Options that can be used: 
-	-c: to specify the number of packets that to be sent
-	-i: to specify the wait time between each interval
-	-s: to specify packet size
-	-I: to specify network interface to be used
+The `ping` command is a network utility used to test the reachability of a host on a network. It sends Internet Control Message Protocol (ICMP) echo requests to a specified host and measures the round-trip time (RTT), which helps determine network latency.
+	
+ Options that can be used: 
+- -c: to specify the number of packets that to be sent
+- -i: to specify the wait time between each interval
+- -s: to specify packet size
+- -I: to specify network interface to be used
 
 Examples: 
-	- To check connectivity to a remote server: `ping google.com`
-	- To send only 10 ping requests: `ping -c 10 google.com`[6](https://www.redhat.com/en/blog/7-great-network-commands)
-	- To specify a network interface: `ping -I eth0 google.com`[6](https://www.redhat.com/en/blog/7-great-network-commands)
+- To check connectivity to a remote server: `ping google.com`
+- To send only 10 ping requests: `ping -c 10 google.com`
+- To specify a network interface: `ping -I eth0 google.com`
 
-#### Arp
+#### 2. Arp
 
 The arp command in Linux is a crucial utility for managing the Address Resolution Protocol (ARP) cache, which maps IP addresses to MAC addresses within a local area network (LAN). This mapping is essential for enabling communication between devices on the network.
 
@@ -169,7 +169,7 @@ The `arp` command allows users to view, add, or delete ARP entries. Here are som
     `arp -n`
 
 
-#### IFCONFIG
+#### 3. IFCONFIG
 this is a cli network utility in order to display and configure all network interfaces both wired and wireless.
 
 The information is given for each of the network interfaces like enp2s0, lo, wlan etc
@@ -191,19 +191,15 @@ The information is given for each of the network interfaces like enp2s0, lo, wla
 
 **OPTIONS to use with ifconfig** 
 
-`ifconfig -a` - to show a list of network interfaces
-`ifconfig eth0 up` - to enable the network interface
-`ifconfig eth0 down` - to disable the network interface
-`ifconfig eth0 192.168.1.10 netmask 255.255.255.0` - to assign static IP and netmask
-`ifconfig eth0 mtu 1500` - to set max transmission unit
-`ifconfig eth0 promisc -` - to enable the interface to go promiscuous mode in order to enable it to capture all packets in the network
-`ifconfig eth0:0 192.168.1.20` - to assign virtual ip, in order to host multiple services on different ips
-`ifconfig eth0 broadcast 192.168.1.255` - to specify the broadcast address for a interface
-`ifconfig | grep inet` - will display the ip addresses of all active interfaces
-
-
-
-
+- `ifconfig -a` - to show a list of network interfaces
+- `ifconfig eth0 up` - to enable the network interface
+- `ifconfig eth0 down` - to disable the network interface
+- `ifconfig eth0 192.168.1.10 netmask 255.255.255.0` - to assign static IP and netmask
+- `ifconfig eth0 mtu 1500` - to set max transmission unit
+- `ifconfig eth0 promisc -` - to enable the interface to go promiscuous mode in order to enable it to capture all packets in the network
+- `ifconfig eth0:0 192.168.1.20` - to assign virtual ip, in order to host multiple services on different ips
+- `ifconfig eth0 broadcast 192.168.1.255` - to specify the broadcast address for a interface
+- `ifconfig | grep inet` - will display the ip addresses of all active interfaces
 
 
 ### Question No: 05
@@ -417,6 +413,6 @@ $sudo passwd username
 ***Connect to the server using the syntax:***
 `$telnet -l username remote_machne_ip`
 
-![[Pasted image 20250301145546.webp|758]]
+![](Pasted%20image%2020250301145546.webp)
 
 ___
