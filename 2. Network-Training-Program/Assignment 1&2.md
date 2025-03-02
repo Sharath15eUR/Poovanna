@@ -1,7 +1,7 @@
----
-### QUESTION NO: 01
-#### Consider a case, a folder has multiple files and how would copy it to destination machine path (Try using SCP, cp options in Linux)
----
+
+## QUESTION NO: 01
+### Consider a case, a folder has multiple files and how would copy it to destination machine path (Try using SCP, cp options in Linux)
+
 
 ***Installations***
 ```
@@ -24,9 +24,9 @@ sudo systemctl status ssh
 ![](./images/Pasted%20image%2020250228000944.webp)
 
 ---
-### QUESTION NO: 02
-#### Host a FTP and SFTP server and try PUT and GET operations
----
+## QUESTION NO: 02
+### Host a FTP and SFTP server and try PUT and GET operations
+
 
 #### 1. FTP
 
@@ -61,9 +61,9 @@ Wireshark packet transfer
 ![](./images/Pasted%20image%2020250301225057.webp)
 
 ---
-### QUESTION NO: 03
-#### Explore with Wireshark/TCP-dump/cisco packet tracer tools and learn about packets filters.
----
+## QUESTION NO: 03
+### Explore with Wireshark/TCP-dump/cisco packet tracer tools and learn about packets filters.
+
 
 #### **1. TCPDUMP**
 
@@ -120,9 +120,9 @@ Inside the *Apply filter option*, we can apply packet filters like:
 - `frame contains traffic` to display all packets that contain the word ‘traffic.’ This is useful when searching for a specific string or user ID. For example, `TCP contains Facebook` to find TCP packets containing the word "Facebook
 
 ---
-### QUESTION NO: 04
-#### Understand linux utility commands like - ping, arp (Understand each params from ifconfig output)
----
+## QUESTION NO: 04
+### Understand linux utility commands like - ping, arp (Understand each params from ifconfig output)
+
 #### 1. Ping 
 
 The `ping` command is a network utility used to test the reachability of a host on a network. It sends Internet Control Message Protocol (ICMP) echo requests to a specified host and measures the round-trip time (RTT), which helps determine network latency.
@@ -203,9 +203,9 @@ The information is given for each of the network interfaces like enp2s0, lo, wla
 - `ifconfig | grep inet` - will display the ip addresses of all active interfaces
 
 ---
-### QUESTION NO: 05
-#### Understand what happens when duplicate ip addresses are assigned
----
+## QUESTION NO: 05
+### Understand what happens when duplicate ip addresses are assigned
+
 
 The situation of duplicate ip addresses occurs whenever there is a manual configuration errors my assigning similar static ips or DHCP misconfiguration or network device failures
 
@@ -225,9 +225,9 @@ In order to prevent or detect duplicate ip addresses
 - **Conflict Resolution:** If there is an attempt to assign an already allocated IP address, the DHCP server can detect this conflict and take appropriate actio
 
 ---
-### QUESTION NO: 06
-#### Understand how to access remote system using (VNC viewer, Anydesk, teamviewer and remote desktop connections)
----
+## QUESTION NO: 06
+### Understand how to access remote system using (VNC viewer, Anydesk, teamviewer and remote desktop connections)
+
 
 #### 1. VNC Viewer
 - **Install VNC Server and Viewer**: On the remote computer, install VNC Server. On the local device, install VNC Viewer.
@@ -251,9 +251,9 @@ In order to prevent or detect duplicate ip addresses
   - On macOS, iOS, or Android: Download Microsoft Remote Desktop app, add the PC name, and connect.
 
 ---
-### QUESTION NO: 07
-#### Check if default gateway is reachable or not and understand about default gateways
----
+## QUESTION NO: 07
+### Check if default gateway is reachable or not and understand about default gateways
+
 
 The default gateway is a router that allows your computer to access networks outside your local network. It acts as an access point, passing network data from local to remote networks
 
@@ -266,9 +266,9 @@ To check if the gateway is reachable or not:
 	- `ping ip_addr`
 
 ---
-### QUESTION NO: 08
-#### Check iwconfig/ifconfig to understand in detail about network interfaces (check about interface speed, MTU and other parameters)
----
+## QUESTION NO: 08
+### Check iwconfig/ifconfig to understand in detail about network interfaces (check about interface speed, MTU and other parameters)
+
 
 **1. iwconfig** - this is a cli network utility in order to display and configure wireless network interfaces
 
@@ -299,9 +299,9 @@ Network details of each of the interfaces can be like:
 7. **RX & TX** - shows the total packets received and transmitted and in bytes, and its errors and collisions
 
 ---
-### QUESTION NO: 09
-#### Log in to your home router's web interface (usually at 192.168.1.1 or 192.168.0.1) and check the connected devices list.
----
+## QUESTION NO: 09
+### Log in to your home router's web interface (usually at 192.168.1.1 or 192.168.0.1) and check the connected devices list.
+
 1. Type 192.168.1.1 in any of the web browswer
 2. A user interface for wifi network will be shown
 3. Enter admin username and password and type the verification code
@@ -316,9 +316,9 @@ Network details of each of the interfaces can be like:
 
 
 ---
-### QUESTION NO: 10
-#### Explain how DHCP server assigns IP addresses to devices in your network
----
+## QUESTION NO: 10
+### Explain how DHCP server assigns IP addresses to devices in your network
+
 
 **DHCP - Dynamic Host Configuration Protocol automates the assignment of IP addresses and network configurations to devices within a network.**
 
@@ -361,9 +361,9 @@ DHCP servers can allocate IP addresses in three main ways:
     - An administrator manually maps specific MAC addresses to designated IP addresses in the DHCP server configuration. This ensures that certain devices always receive specific IP addresses when they connect.
     
 ---
-### QUESTION NO: 11
-##### Using a terminal, connect to a remote machine via SSH and telnet.
----
+## QUESTION NO: 11
+### Using a terminal, connect to a remote machine via SSH and telnet.
+
 
 #### **1. SSH**
 
