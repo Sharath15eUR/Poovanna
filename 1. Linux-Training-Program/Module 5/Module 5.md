@@ -151,6 +151,6 @@ fi
 
 ## ***Output***
 
-![](../../images/Pasted%20image%2020250131225538.webp "")
+![](../images/Pasted%20image%2020250131225538.webp "")
 
-![](../../images/Pasted%20image%2020250131225605.webp)
+![](../images/Pasted%20image%2020250131225605.webp)
