@@ -414,6 +414,6 @@ $sudo passwd username
 ***Connect to the server using the syntax:***
 `$telnet -l username remote_machne_ip`
 
-![](Pasted%20image%2020250301145546.webp)
+![](./images/Pasted%20image%2020250301145546.webp)
 
 ___
