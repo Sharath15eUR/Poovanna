@@ -405,7 +405,7 @@ $sudo ufw allow 23/tcp
 $sudo ufw reload
 ```
 
-***Create new user and enter password ***
+***Create new user and enter password***
 ```
 $sudo useradd username
 $sudo passwd username
