@@ -1,4 +1,5 @@
-### Question No: 01
+---
+### QUESTION NO: 01
 #### Consider a case, a folder has multiple files and how would copy it to destination machine path (Try using SCP, cp options in Linux)
 ---
 
@@ -22,8 +23,8 @@ sudo systemctl status ssh
 `$scp -P port username@ip_address:source_addr dest_addr`
 ![](./images/Pasted%20image%2020250228000944.webp)
 
-
-### Question No: 02
+---
+### QUESTION NO: 02
 #### Host a FTP and SFTP server and try PUT and GET operations
 ---
 
@@ -59,8 +60,8 @@ Wireshark packet transfer
 - While FTP packets are not encrypted
 ![](./images/Pasted%20image%2020250301225057.webp)
 
-
-### Question No: 03
+---
+### QUESTION NO: 03
 #### Explore with Wireshark/TCP-dump/cisco packet tracer tools and learn about packets filters.
 ---
 
@@ -118,8 +119,8 @@ Inside the *Apply filter option*, we can apply packet filters like:
 - `http.host == "www.google.com”` to filter traffic by a specific URL
 - `frame contains traffic` to display all packets that contain the word ‘traffic.’ This is useful when searching for a specific string or user ID. For example, `TCP contains Facebook` to find TCP packets containing the word "Facebook
 
-
-### Question No: 04
+---
+### QUESTION NO: 04
 #### Understand linux utility commands like - ping, arp (Understand each params from ifconfig output)
 ---
 #### 1. Ping 
@@ -201,8 +202,8 @@ The information is given for each of the network interfaces like enp2s0, lo, wla
 - `ifconfig eth0 broadcast 192.168.1.255` - to specify the broadcast address for a interface
 - `ifconfig | grep inet` - will display the ip addresses of all active interfaces
 
-
-### Question No: 05
+---
+### QUESTION NO: 05
 #### Understand what happens when duplicate ip addresses are assigned
 ---
 
@@ -223,8 +224,8 @@ In order to prevent or detect duplicate ip addresses
     
 - **Conflict Resolution:** If there is an attempt to assign an already allocated IP address, the DHCP server can detect this conflict and take appropriate actio
 
-
-### Question No: 06
+---
+### QUESTION NO: 06
 #### Understand how to access remote system using (VNC viewer, Anydesk, teamviewer and remote desktop connections)
 ---
 
@@ -249,8 +250,8 @@ In order to prevent or detect duplicate ip addresses
   - On Windows: Search for "Remote Desktop Connection," enter the PC name, and connect.
   - On macOS, iOS, or Android: Download Microsoft Remote Desktop app, add the PC name, and connect.
 
-
-### Question No: 07
+---
+### QUESTION NO: 07
 #### Check if default gateway is reachable or not and understand about default gateways
 ---
 
@@ -264,8 +265,8 @@ To check if the gateway is reachable or not:
 2. Use ping in order to check if reachable or not
 	- `ping ip_addr`
 
-	
-### Question No:08
+---
+### QUESTION NO: 08
 #### Check iwconfig/ifconfig to understand in detail about network interfaces (check about interface speed, MTU and other parameters)
 ---
 
@@ -297,8 +298,8 @@ Network details of each of the interfaces can be like:
 6. **txqueuelen** - this is the transmit queue length for the wireless interface
 7. **RX & TX** - shows the total packets received and transmitted and in bytes, and its errors and collisions
 
-
-### Question No:09
+---
+### QUESTION NO: 09
 #### Log in to your home router's web interface (usually at 192.168.1.1 or 192.168.0.1) and check the connected devices list.
 ---
 1. Type 192.168.1.1 in any of the web browswer
@@ -314,8 +315,8 @@ Network details of each of the interfaces can be like:
 	- Lease Time
 
 
-
-### Question No: 10
+---
+### QUESTION NO: 10
 #### Explain how DHCP server assigns IP addresses to devices in your network
 ---
 
@@ -359,8 +360,8 @@ DHCP servers can allocate IP addresses in three main ways:
 3. **Manual Allocation:**
     - An administrator manually maps specific MAC addresses to designated IP addresses in the DHCP server configuration. This ensures that certain devices always receive specific IP addresses when they connect.
     
-
-### Question No: 11
+---
+### QUESTION NO: 11
 ##### Using a terminal, connect to a remote machine via SSH and telnet.
 ---
 
