@@ -54,7 +54,7 @@ sudo systemctl status ssh
 
 
 Wireshark packet transfer
-- SFTP packets are encrypted
+- SFTP packets are encrypted, since it uses secure shell protocol
 ![](./images/Pasted%20image%2020250301223507.webp)
 
 - While FTP packets are not encrypted
