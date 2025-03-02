@@ -134,7 +134,7 @@ echo "Backup completed successfully..!"
 ---
 
 ### ***Output***
-![](../../images/Pasted%20image%2020250128220911.webp)
+![](../images/Pasted%20image%2020250128220911.webp)
 
 ---
 
