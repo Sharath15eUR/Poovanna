@@ -38,7 +38,7 @@ When an application wants to send data over a network:
 1. **Socket Layer**: The application uses sockets to send data.
 2. **Networking Stack**: The data is passed down through various layers (TCP/IP stack) until it reaches the device driver.
     1. **Driver Interaction**:
-    - The driver prepares the packet for transmission by filling out descriptors and invoking `ndo_start_xmit`.
+    - The driver prepares the packet for transmission by filling out descriptors and invoking `ndo_start_xmit`. By invoking this function it is sent to the NIC
     - Example of packet transmission:
         `int result = dev_queue_xmit(skb); // skb is the socket buffer containing data.`
         
@@ -50,15 +50,49 @@ Modern NICs support offloading features that reduce CPU load:
 
 ## Packet Reception
 
-### 1. Receiving Data
-When a packet arrives at the network interface:
-1. **Interrupt Handling**: The NIC generates an interrupt to notify the kernel of incoming data.
-2. **NAPI Polling**: If NAPI (New API) is enabled, it switches from interrupt-driven to polling mode for efficiency:
-    - The driver polls for packets instead of relying solely on interrupts, reducing overhead during high traffic.     
+### 1. Packet Transmission Triggered
+- When the Linux kernel wants to transmit a packet, it calls the `ndo_start_xmit` function, which is part of the `net_device_ops` structure in the driver. This function is responsible for starting the transmission process at the hardware level
+- The packet to be transmitted is encapsulated in a `struct sk_buff` (socket buffer), which contains both the data and metadata about the packet (e.g., protocol type, length).
+    
 
-### 2. Buffer Management
-Incoming packets are stored in socket buffers (`struct sk_buff`) before being passed up the stack:
-- Each buffer contains metadata about the packet (length, protocol type).
+### 2. Queue Management
+- Before transmitting, the kernel checks whether the NIC's transmission queue has space available:
+    - **Queue Stopped**: If the queue is full, the driver uses `netif_stop_queue()` to stop further enqueueing of packets.
+    - **Queue Resumed**: Once space becomes available, `netif_wake_queue()` is called to resume packet transmission.
+- If the queue is ready, the driver proceeds with transmission.
+    
+
+### 3. Packet Preparation
+- The driver prepares the packet for transmission:
+    - **DMA Mapping**: The driver maps the packet's memory (from `sk_buff`) to a specific location in physical memory using DMA (Direct Memory Access). This ensures that the NIC can access the data directly without CPU intervention.
+    - **Descriptor Setup**: The driver sets up DMA descriptors that point to the mapped memory. These descriptors inform the NIC where to find the data and how much data to transmit.
+        
+
+### 4. Adding Packet to TX Ring
+- The packet is added to the NIC's TX ring buffer:
+    - The TX ring is a circular buffer in hardware or memory where packets are queued for transmission.
+    - The driver writes metadata (e.g., packet length, flags) and updates indices in the descriptor ring to track which packets have been queued for transmission.
+        
+
+### 5. NIC Transmission Initiation
+- After adding packets to the TX ring, the driver notifies the NIC that new data is ready for transmission:
+    - This is typically done by writing to a hardware register or triggering an interrupt on the NIC.
+    - The NIC begins fetching data from memory using DMA and starts transmitting it on the wire.
+        
+
+### 6. Post-Transmission Cleanup
+- Once a packet has been successfully transmitted:
+    - The NIC generates an interrupt or updates its status registers to notify the driver.
+    - The driver processes this notification by freeing up resources associated with the transmitted packet (e.g., unmapping DMA memory and freeing `sk_buff`).
+    - The TX ring buffer indices are updated to reflect that space has been freed.
+        
+
+### 7. Error Handling
+- If an error occurs during transmission (e.g., hardware failure or link down):
+    - The driver may reset the TX ring or reinitialize hardware.
+    - For transient errors like queue full conditions, `NETDEV_TX_BUSY` may be returned from `ndo_start_xmit`, signaling that transmission should be retried later.
+        
+
 
 
 ## Driver Architecture
