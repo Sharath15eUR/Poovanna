@@ -1,9 +1,7 @@
-
-# TASK: 1: Implement ACLs to restrict traffic based on source and destination ports. Test rules by simulating legitimate and unauthorized traffic.
-# TASK: 2: Configure a standard Access Control List (ACL) on a router to permit traffic from a specific IP range. Test connectivity to verify the ACL is working as intended.
-# Task: 3: Create an extended ACL to block specific applications, such as HTTP or FTP traffic. Test the ACL rules by attempting to access blocked services.
-
-
+### TASK: 1: Implement ACLs to restrict traffic based on source and destination ports. Test rules by simulating legitimate and unauthorized traffic.
+### TASK: 2: Configure a standard Access Control List (ACL) on a router to permit traffic from a specific IP range. Test connectivity to verify the ACL is working as intended.
+### Task: 3: Create an extended ACL to block specific applications, such as HTTP or FTP traffic. Test the ACL rules by attempting to access blocked services.
+---
 ACLs are sequential lists of permit or deny statements that the router uses to control traffic. They act as traffic filters, allowing administrators to:
 
 - Control what traffic can enter or exit network interfaces
@@ -12,23 +10,23 @@ ACLs are sequential lists of permit or deny statements that the router uses to c
 
 
 - Connect the components in the below method
-![[Pasted image 20250318091837.webp]]
+- ![](./img/Pasted%20image%2020250318091837.webp)
 
 - As we can see, we are able to ping to the other network. Hence still ACL is not active
-![[Pasted image 20250317224952.webp]]
+- ![](./img/Pasted%20image%2020250317224952.webp)
 
 
 - In router2, we are creating a access list which will permit packets only from the 192.168.1.10 PC and will deny the rest.
 - 0.0.0.0 is a wildcard mask which makes it clear that if it is 0, the ip address should match with the one specified
-![[Pasted image 20250317225343.webp]]
+- ![](./img/Pasted%20image%2020250317225343.webp)
 - Now we are activating the access-group for the particular interface
-![[Pasted image 20250317230551.webp]]
+- ![](./img/Pasted%20image%2020250317230551.webp)
 
 - After enabling the ACL in router2 via the interface connecting router1,
 1. We are able to ping from the second pc 
-![[Pasted image 20250317230519.webp]]
+- ![](./img/Pasted%20image%2020250317230519.webp)
 2. But ICMP packets from 1st pc are getting blocked.
-![[Pasted image 20250317230500.webp]]
+- ![](./img/Pasted%20image%2020250317230500.webp)
 
 
 ---
@@ -37,19 +35,18 @@ ACLs are sequential lists of permit or deny statements that the router uses to c
 
 ### HTTP(80) & HTTPS(443)
 - Initially from 192.168.1.10, i am able to send https request to the server 192.168.2.20, which has a port 443
- ![[Pasted image 20250318082316.webp]]
+- ![](./img/Pasted%20image%2020250318082316.webp)
 
 - Created a new access-list and activated it.
 - After applying the ACL blocking all https traffic going out of GigaBitEthernet0/0/0
-![[Pasted image 20250318082600.webp]]
-![[Pasted image 20250318082646.webp]]
+- ![](./img/Pasted%20image%2020250318082600.webp)
+- ![](./img/Pasted%20image%2020250318082646.webp)
 
 - ICMP packets are able to leave
-![[Pasted image 20250318082709.webp]]
+- ![](./img/Pasted%20image%2020250318082709.webp)
 
 - But packets with destination port 443 for https and 80 for http are blocked by the router
-![[Pasted image 20250318083449.webp]]
-
+- ![](./img/Pasted%20image%2020250318083449.webp)
 
 
 ```
@@ -57,7 +54,7 @@ REMOVE AN ACCESS-GROUP: no ip access-group number in/out
 REMOVE AN ACCESS-LIST: no access-list number
 TO SHOW ALL ACCESS-LIST: show access-list
 ```
-![[Pasted image 20250318090910.webp]]
+- ![](./img/Pasted%20image%2020250318090910.webp)
 
 
 ### FTP(20/21)
@@ -65,14 +62,12 @@ port 21 is used for commands and responses, for control connection
 port 20 is used for actual data or file transfers
 
 - Able to connect before ACL was activated
-![[Pasted image 20250318091413.webp]]
-![[Pasted image 20250318091708.webp|453]]
+- ![](./img/Pasted%20image%2020250318091413.webp)
+- ![](./img/Pasted%20image%2020250318091708.webp)
 - After ACL was configued
-![[Pasted image 20250318091654.webp]]
-
+- ![](./img/Pasted%20image%2020250318091654.webp)
 ---
-
-### PROCEDURE:
+## PROCEDURE:
 
 # 1: Implement ACLs to restrict traffic based on source and destination ports
 
