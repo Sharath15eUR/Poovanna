@@ -1,5 +1,5 @@
 	
-### 1. Capture and analyze ARP packets using Wireshark. Inspect the ARP request and reply frames, and discuss the role of the sender's IP and MAC address in these packets.
+## 1. Capture and analyze ARP packets using Wireshark. Inspect the ARP request and reply frames, and discuss the role of the sender's IP and MAC address in these packets.
 
 In L2, communication takes place using MAC address
 	- The sender wishes to know the recipient's MAC address.
@@ -8,18 +8,18 @@ In L2, communication takes place using MAC address
 	- By sending the IP address, it also helps the recipient to update its ARP cache for future use.
 	
 ARP REQUEST
-	![[Pasted image 20250315152941.webp]]
-	![[Pasted image 20250315153022.webp]]
+	![](./img/Pasted%20image%2020250315152941.webp)
+	![](./img/Pasted%20image%2020250315153022.webp)
 
 ARP RESPONSE
-	![[Pasted image 20250315152953.webp]]
-	![[Pasted image 20250315153034.webp]]
+	![](./img/Pasted%20image%2020250315152953.webp)
+	![](./img/Pasted%20image%2020250315153034.webp)
 
 
 ---
 
 
-### 2. 1. Capture and analyze ARP packets using Wireshark. Inspect the ARP request and reply frames when your device attempts to find the router's MAC address.
+## 2. 1. Capture and analyze ARP packets using Wireshark. Inspect the ARP request and reply frames when your device attempts to find the router's MAC address.
     Discuss the importance of ARP in packet forwarding.
 
 
@@ -34,12 +34,12 @@ ARP RESPONSE
 - By sending the IP address, it also helps the recipient to update its ARP cache for future use.
 
 ARP REQUEST
-	![[Pasted image 20250315152941.webp]]
-	![[Pasted image 20250315153022.webp]]
+	![](./img/Pasted%20image%2020250315152941.webp)
+	![](./img/Pasted%20image%2020250315153022.webp)
 
 ARP RESPONSE
-	![[Pasted image 20250315152953.webp]]
-	![[Pasted image 20250315153034.webp]]
+	![](./img/Pasted%20image%2020250315152953.webp)
+	![](./img/Pasted%20image%2020250315153034.webp)
 
 
 
