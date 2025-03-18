@@ -1,10 +1,10 @@
-### 1. Download iperf in laptop/phone and make sure they are in same network. Try different iperf commands with tcp, udp, birectional, reverse, multicast, parallel options and analyze the bandwidth and rate of transmission, delay, jitter etc.
+## 1. Download iperf in laptop/phone and make sure they are in same network. Try different iperf commands with tcp, udp, birectional, reverse, multicast, parallel options and analyze the bandwidth and rate of transmission, delay, jitter etc.
 
 iPerf3 is a tool for active measurements of the maximum achievable bandwidth on IP networks. It supports tuning of various parameters related to timing, buffers and protocols (TCP, UDP, SCTP with IPv4 and IPv6). For each test it reports the bandwidth, loss, and other parameters.
 
 - Install iperf3 in both laptop and phone
-		- Laptop: `sudo apt install iperf3`
-		- Phone: `pkg install iperf3`
+  - Laptop: `sudo apt install iperf3`
+  - Phone: `pkg install iperf3`
 - Run iperf3 server on laptop: `iperf3 -s`
 - Client can connect to the server using: `iperf3 -c <ip_address>`
 
@@ -17,39 +17,39 @@ iPerf3 is a tool for active measurements of the maximum achievable bandwidth on 
 
 ---
 
-### TCP
+## TCP
 
 By default..data is transferred using TCP 
-	
-![[Pasted image 20250316155327.webp]]
-	
+
+![](./img/Pasted%20image%2020250316155327.webp)
+
 ---
 
-### UDP
+## UDP
 
 Connect to the server using: `iperf3 -c <ip_address> -u -b 10M` : to transfer 10MBytes
 
-![[Pasted image 20250316155851.webp]]
+![](./img/Pasted%20image%2020250316155851.webp)
 
 ---
 
-### birectional
+## birectional
 
 - Connect to the server: `iperf3 -c <ip_addr> -u -b 10M --bdir`
 
-![[Pasted image 20250316160102.webp]]
+![](./img/Pasted%20image%2020250316160102.webp)
 
 ---
 
-### reverse
+## reverse
 
 `iperf3 -c <ip_addr> -u -b 10M -R`
 
-![[Pasted image 20250316160232.webp]]
+![](./img/Pasted%20image%2020250316160232.webp)
 
 ---
 
-### multicast
+## multicast
 -ERROR:  multicasting option doesnt exist in iperf3
 
 - `-s` → Starts **iPerf in server mode** (listens for connections).
@@ -70,15 +70,15 @@ Connect to the server using: `iperf3 -c <ip_address> -u -b 10M` : to transfer 10
     - UDP is not congestion-controlled like TCP, so setting a bandwidth limit is necessary.
     - Default (without `-b`) is **1 Mbps**.
     
-![[Pasted image 20250316162301.webp]]
+![](./img/Pasted%20image%2020250316162301.webp)
 
-![[Pasted image 20250316162322.webp]]
+![](./img/Pasted%20image%2020250316162322.webp)
 
 ---
 
-### parallel
+## parallel
 To Establish 10 simultaneous connections: `iperf3 -c <ip_addr> -P 10`
 
-![[Pasted image 20250316160801.webp]]
+![](./img/Pasted%20image%2020250316160801.webp)
 
 ---
