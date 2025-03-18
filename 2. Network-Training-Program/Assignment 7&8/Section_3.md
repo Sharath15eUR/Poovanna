@@ -1,8 +1,7 @@
-### 1. Use Cisco packet tracer for the below:
-
-### a. Set up trunk ports between switches and try ping between different VLANs.
-### b. Change the native VLAN on a trunk port. Test for VLAN mismatches and troubleshoot.
-### c. Configure a management VLAN and assign an IP address for remote access. Test SSH or Telnet access to the switch.	 
+## 1. Use Cisco packet tracer for the below:
+	a. Set up trunk ports between switches and try ping between different VLANs.
+	b. Change the native VLAN on a trunk port. Test for VLAN mismatches and troubleshoot.
+	c. Configure a management VLAN and assign an IP address for remote access. Test SSH or Telnet access to the switch.	 
 
 ---
 
@@ -11,23 +10,23 @@
 - Sales team were connected to VLAN 10
 - HR team were connected to VLAN 20
 
-	![[Pasted image 20250317141314.webp|901]]
+	![](./img/Pasted%20image%2020250317141314.webp)
 
 - Using trunk port, departments were able to ping with each other, withing the same LAN.
-	- ![[Pasted image 20250317144037.webp|722]]
+	- ![](./img/Pasted%20image%2020250317144037.webp)
 	
 - Using router on a stick, systems were able to perform inter-VLAN communication.
-	- ![[Pasted image 20250317144048.webp]]
+	- ![](./img/Pasted%20image%2020250317144048.webp)
 	
 - Also configured a management VLAN on switch0, so that systems were able to access the switch via SSH.
-	![[Pasted image 20250317143914.webp]]
+	- ![](./img/Pasted%20image%2020250317143914.webp)
 	
 - To config ip address, subnet mask and gateway in windows manually:  
 	`netsh interface ip set address name="Ethernet" static 192.168.10.2 255.255.255.0 192.168.10.1`
 
 ---
 
-### PROCEDURE:  
+## PROCEDURE:  
 
 ### a. Set up trunk ports between switches and try ping between different VLANs
 
