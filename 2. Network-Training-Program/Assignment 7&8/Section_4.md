@@ -1,26 +1,25 @@
-
-# You have a Cisco switch and a VoIP phone that needs to be placed in a voice VLAN (VLAN 20). The data for the PC should remain in a separate VLAN (VLAN 10). Configure the switch port to support both voice and data traffic. You configured VLANs 10 and 20 on your switch and assigned ports to each VLAN. However, devices in VLAN 10 cannot communicate with devices in VLAN 20. Troubleshoot the issue. Try Inter VLAN routing with Router
+## You have a Cisco switch and a VoIP phone that needs to be placed in a voice VLAN (VLAN 20). The data for the PC should remain in a separate VLAN (VLAN 10). Configure the switch port to support both voice and data traffic. You configured VLANs 10 and 20 on your switch and assigned ports to each VLAN. However, devices in VLAN 10 cannot communicate with devices in VLAN 20. Troubleshoot the issue. Try Inter VLAN routing with Router
 
 
  -  Connect the components in the below manner
  - IP Phone as an internal switch therefore the PC can be connected directly to the it.
 
-	![[Pasted image 20250317203632.webp]]
+	![](./img/Pasted%20image%2020250317203632.webp)
 
 	- Configured a switch port for voice and data using separate VLANs
-	![[Pasted image 20250317201418.webp]]
+	- ![](./img/Pasted%20image%2020250317201418.webp)
 
 	- For confirming the connection we can use `show vlan brief`
-	![[Pasted image 20250317201503.webp]]
+	- ![](./img/Pasted%20image%2020250317201503.webp)
 	- For checking the vlan connections made in a particular interface, we can use the below `show interfaces switchport`
-	![[Pasted image 20250317201546.webp]]
+	- ![](./img/Pasted%20image%2020250317201546.webp)
 
 	- For troubleshooting inter-vlan communication, we will be using a router-on-a-stick, so we need to enable trunking in the respective interface 
-	![[Pasted image 20250317203535.webp]]
-	![[Pasted image 20250317203508.webp]]
+	- ![](./img/Pasted%20image%2020250317203535.webp)
+	- ![](./img/Pasted%20image%2020250317203508.webp)
 
 	- To confirm the ip route, we can use the command `show ip route`
-	![[Pasted image 20250317203432.webp]]
+	- ![](./img/Pasted%20image%2020250317203432.webp)
 
 ---
 
