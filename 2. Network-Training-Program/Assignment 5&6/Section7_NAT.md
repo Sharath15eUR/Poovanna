@@ -1,42 +1,43 @@
 > Combining the answer for both the questions
 
-### 1. In Cisco Packet Tracer, configure NAT on a router to allow internal devices (192.168.1.x) to access the internet.Test connectivity by pinging an external public IP.Capture the traffic in Wireshark and analyze the source IP before and after NAT translation.
----
 
-### 2. In Cisco Packet Tracer, create a small network with multiple devices (e.g., 2 PCs and a router). Use private IP addresses (e.g., 192.168.1.x) on the PCs and configure the router to perform NAT to allow the PCs to access the internet. Task: Test the NAT configuration by pinging an external IP address from the PCs and capture the traffic using Wireshark. What is the source IP address before and after NAT?
+## 1. In Cisco Packet Tracer, configure NAT on a router to allow internal devices (192.168.1.x) to access the internet.Test connectivity by pinging an external public IP.Capture the traffic in Wireshark and analyze the source IP before and after NAT translation.
+
+
+## 2. In Cisco Packet Tracer, create a small network with multiple devices (e.g., 2 PCs and a router). Use private IP addresses (e.g., 192.168.1.x) on the PCs and configure the router to perform NAT to allow the PCs to access the internet. Task: Test the NAT configuration by pinging an external IP address from the PCs and capture the traffic using Wireshark. What is the source IP address before and after NAT?
 
 
 - Created a simple setup, and the server which hosts http services will act as the internet
-	![[Pasted image 20250318130410.webp]]
+	![](./img/Pasted%20image%2020250318130410.webp)
 
 
-	![[Pasted image 20250318130525.webp|443]]
-	![[Pasted image 20250318130534.webp|462]]
+	![](./img/Pasted%20image%2020250318130525.webp)
+	![](./img/Pasted%20image%2020250318130534.webp)
 
 - After setting up the gateway ip addresses, and the device ip addresses, we can move on to NAT configuration.
-- ![[Pasted image 20250318130512.png]]
+- ![](./img/Pasted%20image%2020250318130512.png)
 - This will setup which is the private network and which is the public network
 - In the current context, will perform PAT, so that both the PCs will share the same public ip address
-- ![[Pasted image 20250318130502.webp]]
+- ![](./img/Pasted%20image%2020250318130502.webp)
 - This will basically give the router's gateway address as the public address
-	![[Pasted image 20250318130421.webp]]
-	![[Pasted image 20250318130404.webp]]
+	![](./img/Pasted%20image%2020250318130421.webp)
+	![](./imgPasted%20image%2020250318130404.webp)
 
 
 - Using no, we can remove NAT
 - Use STATIC NAT
-- ![[Pasted image 20250318131048.webp]]
-- ![[Pasted image 20250318131122.webp]]
+- ![](./img/Pasted%20image%2020250318131048.webp)
+- ![](./img/Pasted%20image%2020250318131122.webp)
 
-	![[Pasted image 20250318131030.webp]]
+	![](./img/Pasted%20image%2020250318131030.webp)
 
 
 ---
 
-### PROCEDURE
+## PROCEDURE
 
 
-## 1: Set up the network topology in Packet Tracer
+## Step 1: Set up the network topology in Packet Tracer
 
 1. Open Cisco Packet Tracer and create a new project
 2. Add these devices:
@@ -49,7 +50,7 @@
     - Connect the Switch to the Router's FastEthernet0/0 (using straight-through cable)
     - Connect the Server (internet) to the Router's FastEthernet0/1 (using straight-through cable)
 
-## 2: Configure IP addresses
+## Step 2: Configure IP addresses
 
 ### For internal network:
 - Router's FastEthernet0/0: 192.168.1.1/24
