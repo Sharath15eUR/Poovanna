@@ -1,4 +1,4 @@
-### 1. Using Packet Tracer, simulate an ARP spoofing attack. Analyze the behavior of devices on the network when they receive a malicious ARP response.
+## 1. Using Packet Tracer, simulate an ARP spoofing attack. Analyze the behavior of devices on the network when they receive a malicious ARP response.
 
 - Simulated using 2 subnets
 - ![](./img/Pasted%20image%2020250315161624.webp)
