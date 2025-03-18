@@ -1,4 +1,4 @@
-### 1.  Given an IP address range of 192.168.1.0/24, divide the network into 4 subnets. Task: Manually calculate the new subnet mask and the range of valid IP addresses for each subnet. Assign IP addresses from these subnets to devices in Cisco Packet Tracer and verify connectivity using ping between them.
+## 1.  Given an IP address range of 192.168.1.0/24, divide the network into 4 subnets. Task: Manually calculate the new subnet mask and the range of valid IP addresses for each subnet. Assign IP addresses from these subnets to devices in Cisco Packet Tracer and verify connectivity using ping between them.
 
 
 NETWORK ADDRESS: 192.168.1.0
@@ -28,9 +28,9 @@ New Subnet Mask: 255.255.255.192
 	5. Broadcast address:192.168.1.255
 	6. Host range: 192.168.1.193 to 192.168.1.254
 
-![[Pasted image 20250318182038.webp]]
+- ![](./img/Pasted%20image%2020250318182038.webp)
 
-![[Pasted image 20250318182030.webp]]
+- ![](./img/Pasted%20image%2020250318182030.webp)
 
 ---
 
@@ -73,12 +73,12 @@ New Subnet Mask: 255.255.255.192
 
 
 Simulating the above subnet in Cisco Packet Tracer
-![[Pasted image 20250315122243.webp]]
+- ![](./img/Pasted%20image%2020250315122243.webp)
 
 
 Can use show interfaces command to see all the available interfaces
-![[Pasted image 20250315122230.webp]]
+- ![](./img/Pasted%20image%2020250315122230.webp)
 
 
-![[Pasted image 20250315122424.webp]]
+- ![](./img/Pasted%20image%2020250315122424.webp)
 
