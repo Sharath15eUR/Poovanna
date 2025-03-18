@@ -1,4 +1,4 @@
-### 1.. Manually configure static IPs on the client devices(like Pc or your mobile phone) and verify connectivity using ping.
+## 1.. Manually configure static IPs on the client devices(like Pc or your mobile phone) and verify connectivity using ping.
 
 #### A. Using ip command
 
@@ -18,17 +18,17 @@
 - Under [ipov4] making method=manual,
 - we can config the static ip address, gateway, and dns server address.
 - Pinged my phone with the new ip
-	![[Pasted image 20250318165303.webp]]
+- ![](./img/Pasted%20image%2020250318165303.webp)
 
 
 
 ---
 
 
-### 2. Manually configure static routes on a router to direct packets to different subnets.Use the ip route command and verify connectivity using ping and traceroute.
+## 2. Manually configure static routes on a router to direct packets to different subnets.Use the ip route command and verify connectivity using ping and traceroute.
 
 - Created 2 subnets
-![[Pasted image 20250318172920.webp]]
+- ![](./img/Pasted%20image%2020250318172920.webp)
 
 
 - Since packets to destination present in another network is automatically shared to the router,
@@ -37,5 +37,5 @@
 
 
 - Now we can ping to another subnet
-	![[Pasted image 20250318173937.webp]]
+- ![](./img/Pasted%20image%2020250318173937.webp)
 	
