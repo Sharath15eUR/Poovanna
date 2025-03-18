@@ -1,12 +1,12 @@
  
-### 1.You are given three IP addresses: 10.1.1.1, 172.16.5.10, and 192.168.1.5. Task: Identify the class of each IP address (Class A, B, or C). What is the default subnet mask for each class? Provide the range of IP addresses for each class.
+## 1.You are given three IP addresses: 10.1.1.1, 172.16.5.10, and 192.168.1.5. Task: Identify the class of each IP address (Class A, B, or C). What is the default subnet mask for each class? Provide the range of IP addresses for each class.
 
 - 10.1.1.1    - CLASS A
 - 172.16.5.10 - CLASS B
 - 192.168.1.5 - CLASS C
 
 	There are 5 classes of IP address
-	![[Pasted image 20250314214701.webp|772]]
+	- ![](./img/Pasted%20image%2020250314214701.webp)
 
 
 ---
@@ -58,5 +58,5 @@ This process allows organizations to use private IP addresses internally while m
 
 ### Types of NAT
 
-![[Pasted image 20250318163501.webp]]
+![](./img/Pasted%20image%2020250318163501.webp)
 ___
