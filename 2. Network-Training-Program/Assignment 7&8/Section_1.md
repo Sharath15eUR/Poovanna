@@ -1,26 +1,29 @@
-### 1. Try Test-Connection and nslookup commands for below websites:
+## 1. Try Test-Connection and nslookup commands for below websites:
 - www.google.com
 - www.facebook.com
 - www.amazon.com
 - www.github.com
 - www.cisco.com
 
-	- Test-Connection is a tool present in windows powershell. In linux we can use ping to check connectivity:
-	![[Pasted image 20250316095607.webp]]
-	
-	- `nslookup` (Name Server Lookup) is a command-line tool used to query a DNS (Domain Name System) server to obtain domain name or IP address mappings.
-	- Install dnsutils to use tools like nslookup, dns, dig to get DNS query response.
-		`$sudo apt install dnsutils -y`
-	
-	- **`nslookup` starts a DNS query** from your computer.
-	- **It checks cache first** (local resolver, then DNS server cache).
-	- **If not cached, it queries the full DNS hierarchy** (Root → TLD → Authoritative).
-	- **It prints IP addresses or CNAMEs** based on DNS responses.
-	
-	![[Pasted image 20250316093855.webp|587]]
-	![[Pasted image 20250316093912.webp|582]]
-	![[Pasted image 20250316093932.webp|581]]
+---
 
+- Test-Connection is a tool present in windows powershell. In linux we can use ping to check connectivity:
+![](./imgPasted%20image%2020250316095607.webp)
+	
+- `nslookup` (Name Server Lookup) is a command-line tool used to query a DNS (Domain Name System) server to obtain domain name or IP address mappings.
+- Install dnsutils to use tools like nslookup, dns, dig to get DNS query response.
+	`$sudo apt install dnsutils -y`
+	
+- **`nslookup` starts a DNS query** from your computer.
+- **It checks cache first** (local resolver, then DNS server cache).
+- **If not cached, it queries the full DNS hierarchy** (Root → TLD → Authoritative).
+- **It prints IP addresses or CNAMEs** based on DNS responses.
+
+- ![](./img/Pasted%20image%2020250316093855.webp)
+
+- ![](./img/Pasted%20image%2020250316093912.webp)
+
+- ![](./img/Pasted%20image%2020250316093932.webp)
 
 ---
 
@@ -51,7 +54,7 @@ The output shows a traceroute from my computer to [www.google.com](http://www.go
 
 The asterisks indicate that those routers are configured not to respond to traceroute packets or are blocked by firewalls, which is common for security reasons.
 
-![[Pasted image 20250316105328.webp]]
+![](./img/Pasted%20image%2020250316105328.webp)
 
 
 ---
