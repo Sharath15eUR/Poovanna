@@ -1,5 +1,5 @@
 
-### 4.  Use Wireshark to capture DHCP Discover, Offer, Request, and Acknowledge messages and explain the process.
+## 1.  Use Wireshark to capture DHCP Discover, Offer, Request, and Acknowledge messages and explain the process.
 
 
 - Since our network ip are already configured, we can renew it to capture new packets
@@ -11,7 +11,7 @@ sudo dhclient <interface_name>
 - This will drop the given IP and will renew it.
 
 - Below are the captured packets
-![[Pasted image 20250315181826.webp]]
+![](./img/Pasted%20image%2020250315181826.webp)
 
 
 ---
