@@ -1,4 +1,4 @@
-### 1. Try Static NAT, Dynamic NAT and PAT to translate IPs
+## 1. Try Static NAT, Dynamic NAT and PAT to translate IPs
 
 
 - We can follow the same steps to setup NAT as we did in Assignment5&6 in the NAT question.
@@ -33,7 +33,7 @@
 
 - Enter into global config mode in the router and do the following:
 
-### 1. Static NAT 
+## 1. Static NAT 
 
 1. Configure static mapping:
     ```
@@ -42,13 +42,13 @@
 2. Test by pinging from the statically mapped PC
 3. Capture and verify source IP is translated to 203.0.113.100
 
-	![[Pasted image 20250318131048.webp]]
+	![](./img/Pasted%20image%2020250318131048.webp)
 
-	![[Pasted image 20250318131122.webp|636]]
+	![](./img/Pasted%20image%2020250318131122.webp)
 
 ---
 
-### 2. Dynamic NAT
+## 2. Dynamic NAT
 
 1. Remove previous NAT configuration:
     ```
@@ -70,7 +70,7 @@
 
 ---
 
-### 3. PAT (Port Address Translation)
+## 3. PAT (Port Address Translation)
 
 1. Remove previous NAT configuration:
     ```
@@ -87,9 +87,9 @@
 
 - Therefore as we can see the global address will be the same as the gateway of the router.
 
-	![[Pasted image 20250318130502.webp]]
+	![](./img/Pasted%20image%2020250318130502.webp)
 
-	![[Pasted image 20250318130404.webp]]
+	![](./img/Pasted%20image%2020250318130404.webp)
 
 ---
 
