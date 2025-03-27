@@ -166,21 +166,35 @@ Some of the basic functionalities of Wi-Fi access points are:
 
 #### Example of Home/College Wireless Internet Connectivity Backhaul
 
-**Wi-Fi mesh network**
+#### a. Usually in hostels and schools **Wi-Fi mesh network** is the internet connectivity backhaul: 
 - **Flexibility**: Easily extendable coverage across campus without significant infrastructure changes.
 - **Scalability**: Additional access points can be added as needed to accommodate more users or areas.
 - **Cost-Effectiveness**: Reduces the need for extensive cabling, making it a financially viable option for large spaces.
 - **Performance**: Capable of supporting high bandwidth demands typical in educational settings.
 
+#### b. At homes, since there is only 1 access point or the router which directly connects to the internet, `Ethernet` is used as the backhaul.
+
 
 
 ## 10.  List down the Wi-Fi topologies and use cases of each one.
 
-#### a. Infrastructure Mode: 
-- With infrastructure mode, wireless clients interconnect via an Access Point
-#### b. IBSS or Ad Hoc mode:
-- Independent Basic Service Set (IBSS) is defined as two devices connected wirelessly in a peer-to-peer (P2P) manner without the use of an AP
-#### c. Mesh mode
+#### a.Infrastructure Mode
+- The most common Wi-Fi topology, used in homes, offices, and public networks.
+- Components: Includes Wi-Fi clients (laptops, phones) and an Access Point (AP) (e.g., a router).
+- Operation: Devices connect to the AP, which manages communication and connects them to the internet or LAN.
+- Use case: Home Wi-Fi router providing internet to multiple devices.
+
+#### b. Ad-Hoc Mode (Peer-to-Peer)
+- A decentralized network where devices communicate directly without an AP.
+- Components: Wi-Fi-enabled devices acting as both clients and routers.
+- Operation: Devices form a temporary network for local communication.
+- Use case: File sharing between laptops via Wi-Fi Direct.
+
+#### c. Mesh Network
+- A decentralized topology where multiple nodes (routers or devices) relay data dynamically.
+- Components: Multiple interconnected nodes, where each node acts as a relay.
+- Operation: If one node fails, data is rerouted through another, ensuring high reliability.
+- Use case: Smart home IoT networks or city-wide public Wi-Fi.
 
 | **Wi-Fi Topology**      | **Description**                                                                                                            | **Use Cases**                                                                                                                                            |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
