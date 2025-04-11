@@ -2,6 +2,13 @@
 ## 1. What are the different 802.11 PHY layer standards? Compare their characteristics.
 
 
+- **WiFi 1 (802.11, 1997)** - The original standard was extremely slow (2 Mbps) using basic transmission techniques (FHSS, DSSS). 
+- **WiFi 2 & 3 (802.11b/a/g, 1999-2003)** - These early improvements brought speeds up to 54 Mbps. The 802.11g version was particularly important as it worked with older devices while delivering faster speeds.
+- **WiFi 4 (802.11n, 2009)** - A major leap forward that introduced MIMO technology (multiple antennas) and could use both 2.4 GHz and 5 GHz frequencies. Speed jumped to 600 Mbps, making video streaming practical.
+- **WiFi 5 (802.11ac, 2013)** - Focused on the less crowded 5 GHz band with wider channels and more complex data encoding (256-QAM), reaching speeds of 6.9 Gbps. This made 4K streaming and fast file transfers possible.
+- **WiFi 6/6E (802.11ax, 2019-2021)** - Added OFDMA technology to handle many devices simultaneously and expanded to the 6 GHz band. With speeds up to 9.6 Gbps, it's designed for dense environments with many connected devices.
+- **WiFi 7 (802.11be, Upcoming)** - Will push speeds to 46 Gbps with even more advanced techniques, supporting future applications like augmented reality and 8K video.
+  
 |**Standard**|**Wi-Fi Gen**|**Year**|**PHY Name**|**Frequency**|**Max Speed**|**Modulation**|**Channel Width**|**Key Features**|
 |---|---|---|---|---|---|---|---|---|
 |**802.11**|-|1997|IR / FHSS / DSSS|2.4 GHz|2 Mbps|DBPSK / DQPSK|20 MHz|First Wi-Fi standard|
@@ -15,12 +22,6 @@
 |**802.11be**|Wi-Fi 7|~2024|EHT (Extremely High Throughput)|2.4/5/6 GHz|46 Gbps|BPSK to 4096-QAM|Up to 320 MHz|MLO (multi-link), 16x16 MU-MIMO, 4096-QAM|
 
 
-- **WiFi 1 (802.11, 1997)** - The original standard was extremely slow (2 Mbps) using basic transmission techniques (FHSS, DSSS). 
-- **WiFi 2 & 3 (802.11b/a/g, 1999-2003)** - These early improvements brought speeds up to 54 Mbps. The 802.11g version was particularly important as it worked with older devices while delivering faster speeds.
-- **WiFi 4 (802.11n, 2009)** - A major leap forward that introduced MIMO technology (multiple antennas) and could use both 2.4 GHz and 5 GHz frequencies. Speed jumped to 600 Mbps, making video streaming practical.
-- **WiFi 5 (802.11ac, 2013)** - Focused on the less crowded 5 GHz band with wider channels and more complex data encoding (256-QAM), reaching speeds of 6.9 Gbps. This made 4K streaming and fast file transfers possible.
-- **WiFi 6/6E (802.11ax, 2019-2021)** - Added OFDMA technology to handle many devices simultaneously and expanded to the 6 GHz band. With speeds up to 9.6 Gbps, it's designed for dense environments with many connected devices.
-- **WiFi 7 (802.11be, Upcoming)** - Will push speeds to 46 Gbps with even more advanced techniques, supporting future applications like augmented reality and 8K video.
 
 - **Modulation**: Determines how data is transmitted on a wave. Higher-order QAM (like 1024-QAM or 4096-QAM) allows for more data per signal, but is more sensitive to noise.
 - **Channel Width**: Wider channels = more data. 802.11n introduced 40 MHz; later standards went up to 320 MHz (Wi-Fi 7).
