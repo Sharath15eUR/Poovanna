@@ -41,73 +41,57 @@ The MAC header itself is composed of several fields, typically arranged as follo
  
 The IEEE 802.11 MAC layer in Wi-Fi networks is structured to provide distinct functionalities across three types of planes: Management, Control, and Data. Each plane uses specific frame types and mechanisms to fulfil its role in the wireless communication process.
 
-==**Management Plane Functionalities**==
+**1. Management Plane Functionalities**
 
 Management functionalities are responsible for establishing, maintaining, and terminating connections, as well as supporting mobility and network organisation:
 
 - **Network Discovery and Association**
-    
     - Scanning for available networks (active/passive)
     - Association and reassociation requests/responses
-    - Disassociation procedures
-        
+    - Disassociation procedures 
 - **Authentication and Security**
-
     - Authentication and deauthentication frames
-    - Support for encryption and key management (e.g., WPA/WPA2 handshake)
-        
+    - Support for encryption and key management (e.g., WPA/WPA2 handshake) 
 - **Synchronization**
 	Beacon frames for timing synchronization and network parameter broadcast
-        
 - **Roaming Support**
 	Handling reassociation as stations move between access points
-        
 - **Power Management**
 	Announcement Traffic Indication Message (ATIM) and power-saving coordination
 
 
-==**Control Plane Functionalities**==
+**2. Control Plane Functionalities**
 
 Control functionalities coordinate access to the wireless medium and ensure orderly data exchange:
 
 - **Medium Access Coordination**
-    
     - Carrier Sense Multiple Access with Collision Avoidance (CSMA/CA)
     - Distributed Coordination Function (DCF)
-    - Point Coordination Function (PCF) for contention-free access
-        
+    - Point Coordination Function (PCF) for contention-free access  
 - **Collision Avoidance and Resolution**
-	Request to Send (RTS) and Clear to Send (CTS) frames to handle hidden node problem
-        
+    - Request to Send (RTS) and Clear to Send (CTS) frames to handle hidden node problem 
 - **Acknowledgments and Retransmissions**
-    
     - Acknowledgment (ACK) frames for reliable delivery
     - Block ACK for efficient bulk acknowledgment
-        
 - **Frame Spacing and Timing**
-	Enforcing interframe spaces (SIFS, DIFS) to manage transmission order
-        
+    - Enforcing interframe spaces (SIFS, DIFS) to manage transmission order
 - **Power Save Polling**
-	PS-Poll frames for retrieving buffered data during power-saving modes
+    - PS-Poll frames for retrieving buffered data during power-saving modes
         
 
-==**Data Plane Functionalities**==
+**3. Data Plane Functionalities**
 
 Data functionalities handle the actual transmission of user data and ensure its integrity and delivery:
 
 - **Frame Encapsulation and Addressing**
     - Encapsulation of higher-layer data into MAC frames
     - Insertion of source, destination, transmitter, and receiver MAC addresses
-        
 - **Fragmentation and Reassembly**
     - Dividing large data packets into smaller fragments for reliable transmission
-        
 - **Error Detection**
     - Frame Check Sequence (FCS) using CRC for error detection
-        
 - **QoS Support**
     - Differentiated services for traffic classes (e.g., voice, video, best effort)
-        
 - **Transparent Data Transfer**
     - Delivery of MAC Service Data Units (MSDUs) between devices
         
