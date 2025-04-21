@@ -25,15 +25,15 @@ The MAC header itself is composed of several fields, typically arranged as follo
 
 |Field Name|Size|Role in the 802.11 MAC Header|
 |---|---|---|
-|Frame Control|2 bytes|Defines frame type (management, control, data), protocol version, and control flags (e.g., To DS, From DS, More Fragments, Retry, Power Management, etc.). It orchestrates how the frame is interpreted and processed[3](https://www.rfwireless-world.com/articles/wlan/understanding-802-11-wifi-mac-frame-format)[5](https://techimike.com/cwna-chapter-9-802-11-mac/)[6](https://blogs.arubanetworks.com/industries/802-11-mac-header-breakdown/).|
-|Duration/ID|2 bytes|Specifies the time (in microseconds) the channel will be reserved for this frame, supporting collision avoidance and power-save functions[3](https://www.rfwireless-world.com/articles/wlan/understanding-802-11-wifi-mac-frame-format)[4](https://www.mathworks.com/help/wlan/gs/wlan-mac-frame-structure.html).|
-|Address 1|6 bytes|Typically the receiver address (RA) — the intended recipient of the frame[3](https://www.rfwireless-world.com/articles/wlan/understanding-802-11-wifi-mac-frame-format)[6](https://blogs.arubanetworks.com/industries/802-11-mac-header-breakdown/).|
-|Address 2|6 bytes|Typically the transmitter address (TA) — the device sending the frame[3](https://www.rfwireless-world.com/articles/wlan/understanding-802-11-wifi-mac-frame-format)[6](https://blogs.arubanetworks.com/industries/802-11-mac-header-breakdown/).|
-|Address 3|6 bytes|Can be the BSSID, source, or destination address depending on network mode and frame type[3](https://www.rfwireless-world.com/articles/wlan/understanding-802-11-wifi-mac-frame-format)[6](https://blogs.arubanetworks.com/industries/802-11-mac-header-breakdown/).|
-|Sequence Control|2 bytes|Contains sequence and fragment numbers, ensuring correct ordering and reassembly of fragmented frames[3](https://www.rfwireless-world.com/articles/wlan/understanding-802-11-wifi-mac-frame-format)[5](https://techimike.com/cwna-chapter-9-802-11-mac/).|
-|Address 4|6 bytes|Used only in certain cases (e.g., wireless distribution systems) for additional routing information[3](https://www.rfwireless-world.com/articles/wlan/understanding-802-11-wifi-mac-frame-format)[6](https://blogs.arubanetworks.com/industries/802-11-mac-header-breakdown/).|
-|QoS Control|2 bytes|Present in QoS frames; used for prioritizing traffic and supporting quality of service[5](https://techimike.com/cwna-chapter-9-802-11-mac/).|
-|HT Control|4 bytes|Used in high-throughput (HT) frames for advanced control in 802.11n and later standards[5](https://techimike.com/cwna-chapter-9-802-11-mac/).|
+|Frame Control|2 bytes|Defines frame type (management, control, data), protocol version, and control flags (e.g., To DS, From DS, More Fragments, Retry, Power Management, etc.). It orchestrates how the frame is interpreted and processed
+|Duration/ID|2 bytes|Specifies the time (in microseconds) the channel will be reserved for this frame, supporting collision avoidance and power-save functions|
+|Address 1|6 bytes|Typically the receiver address (RA) — the intended recipient of the frame.|
+|Address 2|6 bytes|Typically the transmitter address (TA) — the device sending the frame.|
+|Address 3|6 bytes|Can be the BSSID, source, or destination address depending on network mode and frame type.|
+|Sequence Control|2 bytes|Contains sequence and fragment numbers, ensuring correct ordering and reassembly of fragmented frames.|
+|Address 4|6 bytes|Used only in certain cases (e.g., wireless distribution systems) for additional routing information.|
+|QoS Control|2 bytes|Present in QoS frames; used for prioritizing traffic and supporting quality of service.|
+|HT Control|4 bytes|Used in high-throughput (HT) frames for advanced control in 802.11n and later standards.|
 
 
 ## 3. Please list all the MAC layer functionalities in all Management, Control and Data plane
