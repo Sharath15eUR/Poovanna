@@ -9,8 +9,8 @@ The pillars of Wi-Fi security consist of three fundamental components that work 
     - **802.1X/EAP** with RADIUS servers for enterprise networks
     - **WPA3-Enterprise** for enhanced certificate-based authentication
         
-2. **Encryption**  
-    Scrambles data to prevent eavesdropping using protocols like:
+2. **Confidentiality**  
+    This is achieved by encrypting the data by scrambling the data to prevent eavesdropping using protocols like:
     - **AES-256** (strongest standard, used in WPA2/WPA3)
     - **TKIP** (older, deprecated in favor of AES)
     - **GCMP-256** (WPA3's more secure alternative to AES)
