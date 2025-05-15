@@ -10,7 +10,7 @@ Note:
 
 # Topic 2: Pointers
 
-Question: Write a function in C that takes a pointer to an integer array and its size, and then rearranges the array in-place such that all even numbers appear before odd numbers, preserving the original relative order using only pointer arithmetic (no indexing with []).
+Question: Write a function in C that takes a pointer to an integer array and its size, and then rearranges the array in-place such that all even numbers appear before odd numbers, preserving the original relative order using only pointer arithmetic.
 
 # Topic 3: Arrays
 
